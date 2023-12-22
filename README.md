@@ -25,3 +25,47 @@ cd doravota
 git checkout 0.2.0
 make install
 ```
+# Create Wallet 
+```
+dorad keys add <wallet>
+```
+Replace <wallet> with suitable wallet name as per your choice.
+# Set Your Validator Moniker
+```
+dorad init <yourvalidatorname> --chain-id vota-vk
+dorad config chain-id vota-vk
+```
+Replace <yourvalidatorname> with suitable name as per your choice
+# Download genesis and addrbook file
+```
+wget -O $HOME/.dora/config/genesis.json "https://raw.githubusercontent.com/blacknodes/DoraBlockchain/main/genesis.json"
+wget -O $HOME/.dora/config/addrbook.json "https://raw.githubusercontent.com/blacknodes/DoraBlockchain/main/addrbook.json"
+```
+# Creating a Service File
+```
+sudo tee /etc/systemd/system/dorad.service > /dev/null <<EOF
+[Unit]
+Description=dorad
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which dorad) start
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+# Start Dora Node as Service
+```
+sudo systemctl daemon-reload
+sudo systemctl enable dorad
+sudo systemctl restart dorad
+```
+# Check Logs
+```
+sudo journalctl -u dorad -f -o cat
+```
