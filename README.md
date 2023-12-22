@@ -80,7 +80,7 @@ Monitor the logs to ensure everything is running smoothly:
 sudo journalctl -u dorad -f -o cat
 ```
 # Create Validator
-Finally, create your validator node on the network (replace <wallet_name> and <validator_name> with your specific details):
+Finally, create your validator node on the network (replace <wallet> and <validator_name> with your specific details):
 ```
 dorad tx staking create-validator \
 --commission-rate 0.1 \
