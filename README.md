@@ -69,3 +69,20 @@ sudo systemctl restart dorad
 ```
 sudo journalctl -u dorad -f -o cat
 ```
+# Create Validator
+```
+dorad tx staking create-validator \
+--commission-rate 0.1 \
+--commission-max-rate 1 \
+--commission-max-change-rate 1 \
+--min-self-delegation "1" \
+--amount 1000000000000000000peaka \
+--pubkey $(dorad tendermint show-validator) \
+--from <wallet> \
+--moniker="yourvalidatorname" \
+--chain-id vota-vk \
+--fees 30000000000000000peaka \
+--identity="" \
+--website="" \
+--details="" -y
+```
