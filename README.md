@@ -1,4 +1,7 @@
 # Dora Vota Testnet
+![image](https://github.com/blacknodes/DoraBlockchain/assets/85839823/dfab9e6e-8f16-4e1e-95ff-8776568d990a)
+
+
 # [ONECLICKINSTALLATION](https://github.com/blacknodes/OneClickNodes/blob/main/Dora/README.md)
 
 
