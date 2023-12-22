@@ -1,5 +1,5 @@
 # Dora Vota Testnet
-# [ONECLICKINSTALLATION](https://github.com/blacknodes/DoraBlockchain/main/README.md)
+# [ONECLICKINSTALLATION](https://github.com/blacknodes/OneClickNodes/blob/main/Dora/README.md)
 
 
 # Step By Step Guide
