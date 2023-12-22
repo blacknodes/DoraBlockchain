@@ -1,5 +1,8 @@
 # Dora Vota Testnet
 # [ONECLICKINSTALLATION](https://github.com/blacknodes/DoraBlockchain/main/README.md)
+
+
+# Step By Step Guide
 # Setting Up Dependencies
 First, update your system and install necessary dependencies:
 ```
